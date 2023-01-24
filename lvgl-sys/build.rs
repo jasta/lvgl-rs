@@ -88,10 +88,10 @@ fn main() {
     // Set correct target triple for bindgen when cross-compiling
     let target = env::var("TARGET").expect("Cargo build scripts always have TARGET");
     let host = env::var("HOST").expect("Cargo build scripts always have HOST");
-    if target != host {
-        cc_args.push("-target");
-        cc_args.push(target.as_str());
-    }
+//    if target != host {
+//        cc_args.push("-target");
+//        cc_args.push(target.as_str());
+//    }
 
     let mut additional_args = Vec::new();
     if target.ends_with("emscripten") {
