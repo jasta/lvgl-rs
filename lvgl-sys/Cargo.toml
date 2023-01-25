@@ -20,7 +20,7 @@ name = "lvgl_sys"
 cty = "0.2.1"
 
 [build-dependencies]
-cc = { path = "https://github.com/jasta/cc-rs", branch="fix-espidf-cross" }
+cc = { git = "https://github.com/jasta/cc-rs", branch="fix-espidf-cross" }
 bindgen = { git = "https://github.com/jasta/rust-bindgen", branch = "fix-espidf-triple" }
 
 [features]
