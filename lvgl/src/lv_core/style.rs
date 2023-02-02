@@ -13,6 +13,10 @@ pub struct Style {
 }
 
 impl Style {
+    pub fn raw(&mut self) -> *mut lvgl_sys::lv_style_t {
+        self.raw.as_mut()
+    }
+
     pub fn set_value_str(&mut self, state: State, value: &CStr) -> LvResult<()> {
         let native_state: u32 = state.get_bits();
         unsafe {

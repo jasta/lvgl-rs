@@ -203,7 +203,7 @@ bitflags! {
 }
 
 impl State {
-    pub(crate) fn get_bits(&self) -> u32 {
+    pub fn get_bits(&self) -> u32 {
         self.bits
     }
 }
