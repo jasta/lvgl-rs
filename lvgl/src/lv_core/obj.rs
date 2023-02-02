@@ -47,6 +47,13 @@ pub trait Widget: NativeObject {
         Ok(())
     }
 
+    fn remove_style(&self, part: Self::Part, style: Style) -> LvResult<()> {
+        unsafe {
+            lvgl_sys::lv_obj_remove_style(self.raw()?.as_mut(), part.into(), Box::into_raw(style.raw));
+        };
+        Ok(())
+    }
+
     fn set_pos(&mut self, x: i16, y: i16) -> LvResult<()> {
         unsafe {
             lvgl_sys::lv_obj_set_pos(
