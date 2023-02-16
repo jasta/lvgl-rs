@@ -19,6 +19,10 @@ pub struct Color {
 }
 
 impl Color {
+    pub fn raw(&self) -> lvgl_sys::lv_color_t {
+        self.raw
+    }
+
     pub fn from_rgb((r, g, b): (u8, u8, u8)) -> Self {
         let raw = unsafe { lvgl_sys::_LV_COLOR_MAKE(r, g, b) };
         Self { raw }
