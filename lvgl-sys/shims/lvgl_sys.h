@@ -12,7 +12,7 @@ uint16_t _LV_COLOR_GET_R(lv_color_t color);
 uint16_t _LV_COLOR_GET_G(lv_color_t color);
 uint16_t _LV_COLOR_GET_B(lv_color_t color);
 uint16_t _LV_COLOR_GET_A(lv_color_t color);
-
+lv_color_t _LV_COLOR_TRANSP();
 
 #ifdef __cplusplus
 } /* extern "C" */

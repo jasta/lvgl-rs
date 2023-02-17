@@ -24,3 +24,8 @@ uint16_t _LV_COLOR_GET_A(lv_color_t color)
 {
     return LV_COLOR_GET_A(color);
 }
+
+lv_color_t _LV_COLOR_TRANSP()
+{
+    return LV_COLOR_TRANSP;
+}
